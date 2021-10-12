@@ -31,28 +31,31 @@ class bin_tree{
 				return right->get(&i[1], size-1);
 			}
 		}
-		void newline(int level){
-			for (int i=0;i<level;i++){
-				std::cout<<"│";
-			}
+		void newline(std::string input){
+			std::cout<<input;
 		}
-		void print(int level){
+		void print(std::string buffer){
 			//std::cout<<"printcalled"<<std::endl;
-			if (level==1) std::cout<<"├";
+			if (buffer.size()==1) std::cout<<"└";
 			std::cout<<value<<std::endl;;
 			/**/
 			if (not (left==nullptr && right==nullptr)){
-				newline(level);
+				//newline(level);
+				std::cout<<buffer;
 				std::cout<<"├";
 				if (left!=nullptr){
-					left->print(level+1);
+					buffer.append("│");
+					left->print(buffer);
+					buffer.pop_back();
 				}else{
 					std::cout<<"nullptr"<<std::endl;;
 				}
-				newline(level);
+				newline(buffer);
 				std::cout<<"└";
 				if (right!=nullptr){
-					right->print(level+1);
+					buffer.append(" ");
+					right->print(buffer);
+					buffer.pop_back();
 				}else{
 					std::cout<<"nullptr"<<std::endl;;
 				}
@@ -62,7 +65,7 @@ class bin_tree{
 	public:
 	void print(){
 		std::cout<<"┌root"<<std::endl;
-		root.print(1);
+		root.print(" ");
 		std::cout<<std::endl;
 	}
 	split root;
