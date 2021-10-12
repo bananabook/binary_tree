@@ -46,7 +46,8 @@ class bin_tree{
 				if (left!=nullptr){
 					buffer.append("│");
 					left->print(buffer);
-					buffer.pop_back();
+					//buffer.pop_back();
+					buffer=buffer.substr(0,buffer.size()-3);
 				}else{
 					std::cout<<"nullptr"<<std::endl;;
 				}
