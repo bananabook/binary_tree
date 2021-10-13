@@ -7,19 +7,19 @@ You need the g++ Gnu compiler. You can compile the source code directly or if yo
 ## Why run it?
 It has a nice print function:
 
-0
-├0
-│├0
-││├0
-│││├nullptr
-│││└0
-│││ ├0
-│││ │├1
-│││ │└nullptr
-│││ └nullptr
-││└nullptr
-│└0
-│ ├nullptr
-│ └2
-└nullptr
+``` 0
+``` ├0
+``` │├0
+``` ││├0
+``` │││├nullptr
+``` │││└0
+``` │││ ├0
+``` │││ │├1
+``` │││ │└nullptr
+``` │││ └nullptr
+``` ││└nullptr
+``` │└0
+``` │ ├nullptr
+``` │ └2
+``` └nullptr
 
